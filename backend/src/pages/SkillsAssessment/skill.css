@@ -1,0 +1,22 @@
+.p-multiselect {  display: flex !important;   height: 34px !important; border-radius: 0.25rem !important; }
+.p-multiselect .p-multiselect-label { padding: 0 !important;}
+.p-multiselect-label-container { display: block;
+    width: 100%;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--vz-body-color);
+    background-color: var(--vz-input-bg);
+    background-clip: padding-box;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+
+    .p-multiselect:not(.p-disabled):hover {  color: var(--vz-body-color);
+        background-color: var(--vz-input-bg);
+        border-color: var(--vz-input-focus-border);
+        outline: 0;
+        box-shadow: 0 0 0 0 rgba(64, 81, 137, 0.25);}
+
+  

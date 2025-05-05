@@ -1,0 +1,264 @@
+
+<body>
+    <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+        <!-- Personal Information -->
+        <tr>
+            <td colspan="2" style="font-size: 24px; font-weight: bold; text-align: center;">Personal Information</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>{{user_info.name}}</td>
+        </tr>
+        <tr>
+            <td>Phone Number</td>
+            <td>{{user_info.phone_number}}</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>{{user_info.email}}</td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td>{{user_info.location}}</td>
+        </tr>
+        <tr>
+            <td>Pronouns</td>
+            <td>{{user_info.pronouns}}</td>
+        </tr>
+        <!-- Objective Summary -->
+        <tr>
+            <td colspan="2" style="font-size: 24px; font-weight: bold; text-align: center;">Objective Summary</td>
+        </tr>
+        <tr>
+            <td colspan="2">{{objective_summary}}</td>
+        </tr>
+        <!-- References -->
+        <tr>
+            <td colspan="2" style="font-size: 24px; font-weight: bold; text-align: center;">References</td>
+        </tr>
+        {{#each references}}
+        <tr>
+            <td>Name</td>
+            <td>{{first_name}} {{last_name}}</td>
+        </tr>
+        <tr>
+            <td>Organization</td>
+            <td>{{organization}}</td>
+        </tr>
+        <tr>
+            <td>Phone Number</td>
+            <td>{{phone_number}}</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>{{email}}</td>
+        </tr>
+        {{/each}}
+        <!-- Skills -->
+        <tr>
+            <td colspan="2" style="font-size: 24px; font-weight: bold; text-align: center;">Skills</td>
+        </tr>
+        {{#each skills}}
+        <tr>
+            <td colspan="2">{{name}}</td>
+        </tr>
+        {{/each}}
+        <!-- Education -->
+        <tr>
+            <td colspan="2" style="font-size: 24px; font-weight: bold; text-align: center;">Education</td>
+        </tr>
+        {{#each education}}
+        <tr>
+            <td>School Name</td>
+            <td>{{school_name}}</td>
+        </tr>
+        <tr>
+            <td>College Degree</td>
+            <td>{{college_degree}}</td>
+        </tr>
+        <tr>
+            <td>Study Field</td>
+            <td>{{study_field}}</td>
+        </tr>
+        <tr>
+            <td>Graduation Start Year</td>
+            <td>{{graduation_start_year}}</td>
+        </tr>
+        <tr>
+            <td>Graduation End Year</td>
+            <td>{{graduation_end_year}}</td>
+        </tr>
+        <tr>
+            <td>GPA</td>
+            <td>{{gpa}}</td>
+        </tr>
+        <tr>
+            <td>Education Description</td>
+            <td>{{education_description}}</td>
+        </tr>
+        {{/each}}
+        <!-- Hobbies -->
+        <tr>
+            <td colspan="2" style="font-size: 24px; font-weight: bold; text-align: center;">Hobbies</td>
+        </tr>
+        {{#each hobbies}}
+        <tr>
+            <td colspan="2">{{name}}</td>
+        </tr>
+        {{/each}}
+        <!-- Certifications -->
+        <tr>
+            <td colspan="2" style="font-size: 24px; font-weight: bold; text-align: center;">Certifications</td>
+        </tr>
+        {{#each certification}}
+        <tr>
+            <td>Certification Name</td>
+            <td>{{certification_name}}</td>
+        </tr>
+        <tr>
+            <td>Institution</td>
+            <td>{{institution}}</td>
+        </tr>
+        <tr>
+            <td>Issue Date</td>
+            <td>{{issue_date}}</td>
+        </tr>
+        <tr>
+            <td>Expiry Date</td>
+            <td>{{expiry_date}}</td>
+        </tr>
+        <tr>
+            <td>Credential ID</td>
+            <td>{{credential_id}}</td>
+        </tr>
+        <tr>
+            <td>Credential URL</td>
+            <td>{{credential_url}}</td>
+        </tr>
+        {{/each}}
+        <!-- Awards and Achievements -->
+        <tr>
+            <td colspan="2" style="font-size: 24px; font-weight: bold; text-align: center;">Awards and Achievements</td>
+        </tr>
+        {{#each awards_achievments}}
+        <tr>
+            <td>Certification Name</td>
+            <td>{{certification_name}}</td>
+        </tr>
+        <tr>
+            <td>Awarding Organization</td>
+            <td>{{awarding_organization}}</td>
+        </tr>
+        <tr>
+            <td>Date Received</td>
+            <td>{{date_received}}</td>
+        </tr>
+        <tr>
+            <td>Brief Description</td>
+            <td>{{brief_description}}</td>
+        </tr>
+        {{/each}}
+        <!-- Volunteer Experience -->
+        <tr>
+            <td colspan="2" style="font-size: 24px; font-weight: bold; text-align: center;">Volunteer Experience</td>
+        </tr>
+        {{#each volunteer_experience}}
+            <tr>
+                <td>Organization</td>
+                <td>{{organizationname}}</td>
+            </tr>
+            <tr>
+                <td>Start Date</td>
+                <td>{{startdate}}</td>
+            </tr>
+            <tr>
+                <td>End Date</td>
+                <td>{{enddate}}</td>
+            </tr>
+            <tr>
+                <td>Total Hours</td>
+                <td>{{totalhours}}</td>
+            </tr>
+            <tr>
+                <td>First Name</td>
+                <td>{{firstname}}</td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td>{{lastname}}</td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td>{{phonenumber}}</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>{{email}}</td>
+            </tr>
+            <tr>
+                <td>Responsibilities</td>
+                <td>{{responsibilities}}</td>
+            </tr>
+            <tr>
+                <td>Accomplishments</td>
+                <td>{{accomplishments}}</td>
+            </tr>
+            <tr>
+                <td>Rewarding Aspect</td>
+                <td>{{rewardingaspect}}</td>
+            </tr>
+        {{/each}}
+        <!-- Extracurricular Activities -->
+        <tr>
+            <td colspan="2" style="font-size: 24px; font-weight: bold; text-align: center;">Extracurricular Activities</td>
+        </tr>
+        {{#each extracurricular_activities}}
+        <tr>
+            <td colspan="2">{{name}}</td>
+        </tr>
+        {{/each}}
+        <!-- Work Experience -->
+        <tr>
+            <td colspan="2" style="font-size: 24px; font-weight: bold; text-align: center;">Work Experience</td>
+        </tr>
+        {{#each work_experience}}
+        <tr>
+            <td>Title</td>
+            <td>{{title}}</td>
+        </tr>
+        <tr>
+            <td>Company Name</td>
+            <td>{{company_name}}</td>
+        </tr>
+        <tr>
+            <td>Start Date</td>
+            <td>{{start_date}}</td>
+        </tr>
+        <tr>
+            <td>End Date</td>
+            <td>{{end_date}}</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>{{description}}</td>
+        </tr>
+        <tr>
+            <td>First Name</td>
+            <td>{{first_name}}</td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td>{{last_name}}</td>
+        </tr>
+        <tr>
+            <td>Phone Number</td>
+            <td>{{phone_number}}</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>{{email}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</body>
+

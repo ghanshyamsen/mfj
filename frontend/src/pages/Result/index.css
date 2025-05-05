@@ -1,0 +1,63 @@
+.result_page { background: #FFF3ED; padding: 25px 15px; display: block; min-height: calc(100vh - 70px); }
+.result_page .heading { margin-bottom: 20px; font-size: 24px; font-weight: 600; line-height: 32px; color: #1D1D1F;}
+.result_page .heading span { color: #88888A; font-size: 16px; line-height: 32px; font-weight: 400; }
+
+.result_block { background: #fff; border-radius: 24px;}
+.rb_top_block { background: url(../../assets/images/result.png) no-repeat; background-position: center; background-size: cover; width: 100%; border-radius: 24px 24px 0px 0px; min-height: 120px; display: flex; align-items: center; justify-content: center;  }
+
+.rs_block { padding: 0px 15px 25px; display: block; }
+.rp_block { width: 100%; display: block; background: url(../../assets/images/bgimg.png) no-repeat; background-position: center; background-size: contain; }
+
+.rb_top_block .rbs_messsage { min-width: 700px; min-height: 86px; background: rgba(0,0,0,0.22); border-radius: 24px; margin: 0px auto; padding: 10px 20px; text-align: center; display: inline-block; display: flex; align-items: center; justify-content: center; }
+.rb_top_block .rbs_messsage img { width: 50px; margin-right: 15px; }
+.rb_top_block .rbs_messsage span { font-size: 24px; font-weight: 500; line-height: 31px; color: #FFFFFF;  }
+
+.medal_content {  display: flex; align-items: center; justify-content: center; width: 100%;  padding: 30px; }
+.medal_content img {width: 83px; height: 75px;  margin-right: 20px; }
+.medal_content span { font-size: 24px; font-weight: 500; line-height: 31px; color: #EC8958; }
+
+
+.result_successfully { background: url(../../assets/images/simg1.png) no-repeat, url(../../assets/images/simg2.png) no-repeat, #FFF3ED; background-position: left top -56px, bottom right; background-size: 450px, 450px; }
+.result_successfully .rb_top_block { background: url(../../assets/images/sucessbg.png) no-repeat; background-position: center; background-size: cover; }
+
+.next_btn { width: unset; min-width: 176px; }
+
+
+/*  */
+
+@media(max-width: 1199px) { 
+
+    .rb_top_block .rbs_messsage span { font-size: 20px; line-height: 27px;}
+    .rb_top_block .rbs_messsage img { width: 45px;}
+    .medal_content span { font-size: 20px; line-height: 29px;}
+    .medal_content img { width: 70px; height: 63px; margin-right: 15px;}
+
+    
+
+}
+
+@media(max-width: 767px) { 
+
+.result_page { padding: 25px 0px;}
+.result_page .heading { margin-bottom: 15px; font-size: 20px; line-height: 26px;}
+.rb_top_block .rbs_messsage span { font-size: 18px;}
+.rb_top_block .rbs_messsage { min-width: unset; width: 90%; min-height: auto;}
+.rb_top_block .rbs_messsage img { width: 40px;}
+.medal_content span { font-size: 18px; line-height: 26px;}
+.medal_content { padding: 25px;}
+
+
+
+}
+
+@media(max-width: 600px) { 
+
+.medal_content {padding: 15px;}
+.medal_content span { font-size: 16px; line-height: 23px;}
+.medal_content img { width: 60px; height: 52px;}
+.rb_top_block .rbs_messsage span { font-size: 16px;}
+
+
+
+
+}

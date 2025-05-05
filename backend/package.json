@@ -1,0 +1,134 @@
+{
+  "name": "my-first-job",
+  "version": "2.4.0",
+  "private": true,
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^36.0.1",
+    "@ckeditor/ckeditor5-html-support": "^42.0.0",
+    "@ckeditor/ckeditor5-react": "^5.1.0",
+    "@ckeditor/ckeditor5-source-editing": "^42.0.0",
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "axios": "^0.26.0",
+    "axios-mock-adapter": "^1.20.0",
+    "bootstrap": "5.2.3",
+    "ckeditor5": "^43.0.0",
+    "eslint": "^8.34.0",
+    "feather-icons-react": "^0.6.2",
+    "firebase": "^9.17.1",
+    "formik": "^2.2.9",
+    "i18next": "^22.4.10",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "jodit-react": "^4.1.2",
+    "jquery": "^3.7.0",
+    "jwt-decode": "^4.0.0",
+    "moment": "^2.29.4",
+    "primereact": "^10.8.2",
+    "react": "^18.2.0",
+    "react-bootstrap-sweetalert": "^5.2.0",
+    "react-countdown": "^2.3.5",
+    "react-countup": "^6.4.1",
+    "react-csv": "^2.2.2",
+    "react-data-table-component": "^7.5.3",
+    "react-dom": "^18.2.0",
+    "react-flatpickr": "^3.10.13",
+    "react-hook-form": "^7.45.1",
+    "react-i18next": "^12.2.0",
+    "react-masonry-css": "^1.0.16",
+    "react-perfect-scrollbar": "^1.5.8",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.8.1",
+    "react-scripts": "5.0.1",
+    "react-switch": "^7.0.0",
+    "react-table": "^7.8.0",
+    "react-toastify": "^10.0.5",
+    "reactstrap": "^9.1.6",
+    "redux": "^4.2.1",
+    "redux-saga": "^1.2.2",
+    "remixicon-react": "^1.0.0",
+    "sass": "^1.79.3",
+    "save": "^2.9.0",
+    "simplebar-react": "^3.2.1",
+    "styled-components": "^5.3.6",
+    "web-vitals": "^3.1.1",
+    "yup": "^1.0.0"
+  },
+  "scripts": {
+    "start": "HTTPS=true SSL_CRT_FILE=/etc/apache2/ssl/server.crt SSL_KEY_FILE=/etc/apache2/ssl/private.key PORT=3000 react-scripts start",
+    "build": "react-scripts build --max_old_space_size=8000 build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write \"**/*.{js,jsx,json,md,html,css,less,scss}\""
+  },
+  "babelOptions": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "react-app"
+    ],
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+      "requireConfigFile": false,
+      "ecmaVersion": 2020,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "globals": {
+      "$": true
+    },
+    "settings": {
+      "react": {
+        "version": "^17.0.1"
+      }
+    },
+    "rules": {
+      "semi": 0,
+      "react/no-unescaped-entities": 0,
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
+      "no-unused-vars": "off",
+      "no-extra-boolean-cast": 0,
+      "react/no-unknown-property": "off"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "resolutions": {
+    "moment": "2.29.1",
+    "autoprefixer": "10.4.5"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "babel-plugin-prismjs": "^2.1.0",
+    "css-loader": "^7.1.2",
+    "postcss-loader": "^8.1.1",
+    "resolve-url-loader": "^5.0.0",
+    "sass-loader": "^16.0.2"
+  },
+  "main": "index.js",
+  "license": "MIT"
+}

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My First Job Resume</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+        <style>
+            /* html {scroll-behavior: smooth; }
+            body { margin: 0 ; padding: 0; font-weight: normal !important; overflow-x: hidden; font-family: 'Poppins', sans-serif; } */
+            *, ::after, ::before { -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+            .cv-background { width: 100%; max-width: 595.28pt; height: 628.5pt; margin: 0px auto; background: #ECFDFF, #fff; display: table; }
+            .cv-left-block { background: #ECFDFF url(<%=ipath%>/images/bottom-img.png) no-repeat; background-size: contain; background-position: bottom; width: 150pt;/*  width: 100%; */ height: 100%; /* float: left;  */padding-bottom: 20.75pt; position: relative; display: table-cell; vertical-align: top; }
+            .cv-left-block::before { position: absolute; content: ""; background: url(<%=ipath%>/images/left-dots.png) repeat-y; background-size: contain; background-position: bottom; width: 100%; height: 100%; }
+
+            .user-information { padding: 18.25pt 16.75pt 0pt; position: relative; }
+            .user-information .user-img { width: 84pt; height: 84pt; border: 4.5pt solid #fff; border-radius: 50%; margin: 0px auto 5.25pt; }
+            .user-information .user-img img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: center; }
+            .user-information p { color: #0D1529; font-size: 8.5pt; margin-top: 0px; margin-bottom: 6pt; overflow: hidden; }
+            .user-information p img { width: 11.5pt; height: 11.5pt; margin-right: 3.5pt; float: left; }
+            .user-information p span { width: 88%; display: block; float: right; word-break: break-all; }
+
+            .cv-user-info { overflow: hidden; padding-top: 10.75pt; position: relative;}
+            .cv-user-info .heading-block { width: 100%; padding-right: 7.5pt; }
+            .cv-user-info .heading-block .heading { margin-left: 0pt !important; padding-left: 5pt; float: left; width: 90%; }
+            .cv-user-info .heading-block .cv-img { float: right; margin-top: -23.5pt; margin-right: -1.25pt; }
+
+
+            .activities-block .award-block { width: 100%; display: block; overflow: hidden; padding: 7.5pt; }
+            .activities-block .award-block p.name { color: #0D1529; font-size: 8pt; font-weight: 700; line-height: 12pt; margin-top: 0px; margin-bottom: 3pt; }
+            .activities-block .award-block p.date { color: #77838F; font-size: 8pt; line-height: 12pt; margin-top: 0px; margin-bottom: 2.25pt; }
+            .activities-block .award-block ul { margin: 0px; padding-left: 7.5pt; }
+            .activities-block .award-block ul li { color: #77838F; font-size: 8pt; line-height: 12pt; margin-bottom: 2.25pt; }
+            .activities-block .award-block ul li::marker { color: #0D1529; }
+
+            .activities-box { width: 100%; display: block; overflow: hidden; padding: 7.5pt; }
+            .activities-box p { color: #77838F; font-size: 8pt; line-height: 12pt; margin-top: 0px; overflow: hidden; margin-bottom: 3.25pt; }
+            .activities-box p img { width: 8pt; height: 8pt; margin-right: 4.5pt; float: left; margin-top: 2pt; }
+            .activities-box p span { width: 92%; display: block; float: left; }
+
+            .activities-block .award-block p.s-name {color: #FF7D3F; font-weight: 600;  margin-top: 0px; margin-bottom: 2.25pt; font-size: 8pt; line-height: 12pt; }
+            .activities-block .award-block p.disc { color: #77838F; font-size: 8pt; line-height: 12pt; margin-bottom: 2.25pt; }
+
+            /*  */
+            .cv-right-block { /* float: right; */ width: 293.25pt; /* width: 100%; */ padding-bottom: 35.75pt; background: #fff url(<%=ipath%>/images/topright.png) no-repeat; background-size: contain; background-position: top right; display: table-cell; vertical-align: top; }
+
+            .certified-block { width: 104pt; height: 35pt; border-radius: 0px 0px 0px 7.5pt; background: #52C7D2; float: right; }
+            .certified-block .icon { width: 22pt; height: 22pt; float: left; margin-left: -11pt; margin-top: 5.25pt;  }
+            .certified-block .icon img { width: 100%; height: 100%; }
+            .certified-block .content { padding: 3.75pt 6pt; float: left; }
+            .certified-block .content .job-text { color: #FFF; font-size: 10.75pt; font-weight: 700; margin-top: 0px; margin-bottom: 0px; }
+            .certified-block .content .cer-text { color: #FFF; font-size: 6.5pt; font-weight: 400; margin-top: 0px; margin-bottom: 0px; }
+
+
+            .cvr-block { width: 100%; padding: 12pt; border-bottom:1px solid #F5F6F8;  }
+            .cvr-block .user-name { color: #FF7D3F; font-size: 15pt; margin-bottom: 3.75pt; font-weight: 700; margin-top: 0px; width: 60%; }
+            .cvr-block .user-intro { color: #77838F; font-size: 8pt; line-height: 12pt; margin-bottom: 0px;}
+
+            .education-section { padding-bottom: 5.5pt; }
+            .heading-block .cv-img { width: 26pt; height: 26pt; border-radius: 50%; background: #52C7D2; border: 2px solid #fff; float: left; padding: 3pt; margin-top: -3.5pt; }
+            .heading-block .cv-img img { width: 100%; height: 100%;  }
+            .heading-block .heading { background: linear-gradient(90deg, #52C7D2 -2.95%, #52C7D2 100%); color: #fff; font-size: 9pt; font-weight: 700; text-transform: uppercase; padding: 3pt; padding-left: 21pt; margin: 0px !important; margin-left: 10pt !important; }
+
+            .education-block ul { width: 100%; padding-left: 15pt !important; margin-bottom: 0px !important; overflow: hidden; }
+            .education-block ul li { width: 50%; float: left; margin-bottom: 7.5pt; }
+            .education-block ul li::marker { color: #FF7D3F;  }
+            .education-block ul li h4 { color: #FF7D3F; font-size: 8pt; font-weight: 700; line-height: 12pt; margin: 0px 0px 3pt; }
+            .education-block ul li p { color: #77838F; font-size: 8pt; line-height: 12pt; margin: 0px 0px; }
+
+            .skills-section { padding-bottom: 8.5pt; }
+            .skills-block ul { width: 100%; padding-left: 0 !important; margin-bottom: 0px !important; overflow: hidden; list-style: none; }
+            .skills-block ul li { width: 50%; float: left; margin-bottom: 5pt; padding-right: 1.5pt; }
+            .skills-block ul li .icon { float: left; width: 12pt; height: 12pt; background: #FF7D3F; border-radius: 50%; padding: 2pt; margin-right: 3pt; }
+            .skills-block ul li .icon img { width: 100%; height: 100%; vertical-align: top; }
+            .skills-block ul li p { color: #77838F; font-size: 8pt; line-height: 12pt; margin: 0px 0px; }
+
+            .experience-section { padding-bottom: 5.5pt; }
+            .exb-block { position: relative; width: 100%; overflow: hidden; }
+            .exb-block:first-child { padding-top: 7.5pt; }
+            .exb-block .exbspan { display: block; width: 8.30125pt; margin-right: 4.5pt; height: 60pt; background: url(<%=ipath%>/images/Experiencedot.svg) no-repeat; float: left; background-size: cover; }
+            .exb-block:last-child .exbspan { background: url(<%=ipath%>/images/Experiencedot1.svg) no-repeat; background-size: 100%; }
+
+            .cvr-block .top-block { width: 100%; overflow: hidden; }
+            .cvr-block .top-block .tb-left h4 { color: #FF7D3F; font-size: 8pt; font-weight: 700; line-height: 12pt; margin-bottom: 1.5pt; margin-top: 0px; }
+            .cvr-block .top-block .tb-left p { color: #77838F; font-size: 8pt; line-height: 12pt; margin-bottom: 3.75pt; margin-top: 0px; }
+
+            .cvr-block .bottom-block { padding-bottom: 7.5pt; }
+            .cvr-block .bottom-block ul { margin: 0px; padding-left: 6pt; }
+            .cvr-block .bottom-block ul li {  color: #77838F; font-size: 8pt; line-height: 12pt;}
+            .cvr-block .bottom-block ul li::marker { color: #0D1529; }
+            .cvr-block .bottom-block p { color: #77838F; font-size: 8pt; line-height: 12pt; margin: 0px !important; }
+
+            .training-section.cvr-block .top-block .tb-left { float: left; width: 50%; }
+            .training-section.cvr-block .top-block .tb-right { width: 50%; text-align: right;  overflow: hidden; }
+            .training-section.cvr-block .top-block .tb-right .time { color: #77838F; font-size: 5pt; line-height: 9pt; margin: 0px; width: 100%; }
+
+            .training-section { padding-bottom: 5.5pt; }
+            .training-section .tags { width: 100%; display: block; overflow: hidden; margin-bottom: 3.75pt; }
+            .training-section .tags span { color: #77838F; float: right; text-align: center; font-size: 6.5pt; line-height: 10pt; display: block; border-radius: 7.5pt; background: #E1F0FF; margin-left: 4.5pt; padding: 2pt 4pt; }
+
+            .r-footer { border-top: 1px solid #EFECEC; width: 100%; padding: 6.5pt; overflow: hidden; max-width: 595.27pt; margin: -23.75pt auto 0px; z-index: 1; position: relative; }
+            .r-footer p { color: #77838F; text-align: center; font-size: 8pt; line-height: 12pt; margin: 0px; }
+            .r-footer p span { color: #FF7D3F; font-size: 8pt; font-weight: 700; line-height: 12pt; }
+
+        </style>
+    </head>
+    <body>
+        <div class="cv-background">
+            <div class="cv-left-block">
+                <div class="user-information">
+                    <div class="user-img">
+                        <img src="<%= user.profile_image %>" alt="">
+                    </div>
+                    <p class=""> <img src="<%=ipath%>/images/ic_round-email.svg" alt=""> <span><%= user.email %></span> </p>
+                    <p class=""> <img src="<%=ipath%>/images/ic_round-call.svg" alt=""> <span><%= user.phone_number %></span> </p>
+                    <p class=""> <img src="<%=ipath%>/images/carbon_location-filled.svg" alt=""> <span><%= user.location %></span> </p>
+                </div>
+                <!--  -->
+
+                <div class="cv-user-info">
+                    <% if(resume.activitie_visible_status && resume.extracurricular_activities.length > 0 && resume.extracurricular_activities[0].answer.length > 0 ){
+                        var extracurricular_activities = resume.extracurricular_activities[0].answer;
+                    %>
+                        <div class="activities-block">
+                            <div class="heading-block">
+                                <h1 class="heading"> Extracurricular Activities </h1>
+                                <div class="cv-img"> <img src="<%=ipath%>/images/Gold_Star.svg"> </div>
+                            </div>
+                            <div class="activities-box">
+                                <% extracurricular_activities.forEach(function(value){ %>
+                                    <p class=""> <span> <%=value%> </span> </p>
+                                <% }); %>
+                            </div>
+                        </div>
+                    <% } %>
+                    <!--  -->
+                    <div class="activities-block">
+                        <div class="heading-block">
+                            <h1 class="heading"> Award & Achievements </h1>
+                            <div class="cv-img"> <img src="<%=ipath%>/images/Sliver_Star.svg"> </div>
+                        </div>
+                        <div class="award-block">
+                            <p class="name"> Award Name </p>
+                            <p class="date"> November 2023 </p>
+                            <ul class="">
+                                <li class=""> What it was for... </li>
+                                <li class=""> Why i al proud of this achievement... </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="activities-block">
+                        <div class="heading-block">
+                            <h1 class="heading"> Hobbies </h1>
+                            <div class="cv-img"> <img src="<%=ipath%>/images/Gold_Star.svg"> </div>
+                        </div>
+                        <div class="activities-box">
+                            <p class=""> <img src="<%=ipath%>/images/jug.svg" alt=""> <span> Language </span> </p>
+                            <p class=""> <img src="<%=ipath%>/images/dashboard.svg" alt=""> <span> Chemistry </span> </p>
+                            <p class=""> <img src="<%=ipath%>/images/jug.svg" alt=""> <span> Language </span> </p>
+                            <p class=""> <img src="<%=ipath%>/images/dashboard.svg" alt=""> <span> Chemistry </span> </p>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="activities-block">
+                        <div class="heading-block">
+                            <h1 class="heading"> Prior Work Experience </h1>
+                            <div class="cv-img"> <img src="<%=ipath%>/images/Sliver_Star.svg"> </div>
+                        </div>
+                        <div class="award-block">
+                            <p class="name"> Google </p>
+                            <p class="date"> Customer service </p>
+                            <p class="date"> MM-DD-YYYY to MM-DD-YYYY </p>
+                            <p class="s-name"> Sarah Carter  </p>
+                            <p class="date"> +12 12345 67890 </p>
+                            <p class="date"> sarah87@gmail.com </p>
+                            <p class="disc"> Software engineers design, develop, and test software applications. They work with other engineers, product managers, and other stakeholders to gather requirements, develop solutions, and implement new features.
+                                Contact information for direct supervisor. </p>
+                        </div>
+                    </div>
+                    <!--  -->
+
+                </div>
+            </div>
+            <!-- cv-left-block -->
+            <div class="cv-right-block">
+                <div class="certified-block">
+                    <div class="icon"> <img src="<%=ipath%>/images/medal.png"> </div>
+                    <div class="content">
+                        <p class="job-text"> MY FIRST JOB </p>
+                        <p class="cer-text"> Certified </p>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="cvr-block">
+                    <div class="user-info-block">
+                        <h1 class="user-name"> <%= (user.first_name+" "+user.last_name) %> </h1>
+                        <p class="user-intro"> <%= resume.resume %> </p>
+                    </div>
+                </div>
+                <!--  -->
+                <%
+                    let noSchool = "No, I didnt finish school.";
+                    if(resume.education.length > 0  && resume.education[0].answer.toLowerCase() != noSchool.toLowerCase()){
+                %>
+                <div class="cvr-block education-section">
+                    <div class="heading-block">
+                        <div class="cv-img"> <img src="<%=ipath%>/images/Sliver_Star.svg"> </div>
+                        <h1 class="heading"> Education </h1>
+                    </div>
+                    <div class="education-block">
+                        <ul class="">
+                            <li>
+                                <h4> <%= resume.education[1].answer %> </h4>
+                                <p> <%= resume.education[4].answer %> | <%= resume.education[6].answer %> <br/> GPA: <%= resume.education[7].answer %> </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <% } %>
+
+                <!--  -->
+                <% if(resume.skills_assessment.length > 0 ){
+                    resume.skills_assessment.sort((a, b) => parseFloat(b.point) - parseFloat(a.point));
+
+                    let slicedData = resume.skills_assessment.slice(0, 5);
+                %>
+                    <div class="cvr-block skills-section">
+                        <div class="heading-block">
+                            <div class="cv-img"> <img src="<%=ipath%>/images/Gold_Star.svg"> </div>
+                            <h1 class="heading"> Skills </h1>
+                        </div>
+                        <div class="skills-block">
+                            <ul class="">
+                                <% slicedData.forEach(function(value){ %>
+                                    <li>
+                                        <div class="icon"> <img src="<%=ipath%>/images/carbon_skill-level-advanced.svg"> </div>
+                                        <p> <%=value.skill_name%> </p>
+                                    </li>
+                                <% }); %>
+                            </ul>
+                        </div>
+                    </div>
+                <% } %>
+                <!--  -->
+                <div class="cvr-block experience-section">
+                    <div class="heading-block">
+                        <div class="cv-img"> <img src="<%=ipath%>/images/Sliver_Star.svg"> </div>
+                        <h1 class="heading"> Volunteer Experience </h1>
+                    </div>
+                    <div class="experience-block">
+                        <div class="exb-block">
+                            <div class="exbspan"></div>
+                            <div class="" style="float: left;width: 95%;">
+                                <div class="top-block">
+                                    <div class="tb-left">
+                                        <h4 class="">Organization Name </h4>
+                                        <p class=""> March 2022 - April 2022 </p>
+                                    </div>
+                                </div>
+                                <div class="bottom-block">
+                                    <ul class="">
+                                        <li> What I did... </li>
+                                        <li> What I learned... </li>
+                                        <li> Favorite part... </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="exb-block">
+                            <div class="exbspan"></div>
+                            <div class="" style="float: left;width: 95%;">
+                                <div class="top-block">
+                                    <div class="tb-left">
+                                        <h4 class="">Organization Name </h4>
+                                        <p class=""> March 2022 - April 2022 </p>
+                                    </div>
+                                </div>
+                                <div class="bottom-block">
+                                    <ul class="">
+                                        <li> What I did... </li>
+                                        <li> What I learned... </li>
+                                        <li> Favorite part... </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="cvr-block training-section">
+                    <div class="heading-block">
+                        <div class="cv-img"> <img src="<%=ipath%>/images/Sliver_Star.svg"> </div>
+                        <h1 class="heading"> Certifications & Training  </h1>
+                    </div>
+                    <div class="training-block">
+                        <div class="exb-block">
+                            <div class="exbspan"></div>
+                            <div class="" style="float: left;width: 95%;">
+                                <div class="top-block">
+                                    <div class="tb-left">
+                                        <h4 class="">Certification or Training Name </h4>
+                                        <p class=""> Issuing Organization </p>
+                                    </div>
+                                    <div class="tb-right">
+                                        <div class="tags">
+                                            <span> 85745 </span>
+                                            <span> Academics </span>
+                                        </div>
+                                        <p class="time"> March 2022 - April-02-2022 </p>
+                                    </div>
+                                </div>
+                                <div class="bottom-block">
+                                    <p> These are just a few examples, and there are many other awards and achievements that people can earn. The specific names of awards and achievements will vary depending on the industry or field in which the person is working or volunteering. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="exb-block">
+                            <div class="exbspan"></div>
+                            <div class="" style="float: left;width: 95%;">
+                                <div class="top-block">
+                                    <div class="tb-left">
+                                        <h4 class="">Academic Awards </h4>
+                                        <p class="">community Organization </p>
+                                    </div>
+                                    <div class="tb-right">
+                                        <div class="tags">
+                                            <span> 85745 </span>
+                                            <span> Academics </span>
+                                        </div>
+                                        <p class="time"> March 2022 - April-02-2022 </p>
+                                    </div>
+                                </div>
+                                <div class="bottom-block">
+                                    <p> These are just a few examples, and there are many other awards and achievements that people can earn. The specific names of awards and achievements will vary depending on the industry or field in which the person is working or volunteering. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                    </div>
+                </div>
+                <!--  -->
+            </div>
+            <!--  -->
+        </div>
+        <div class="r-footer">
+            <p class=""> Certified by: <span>MY FIRST JOB</span> </p>
+        </div>
+    </body>
+</html>
+
